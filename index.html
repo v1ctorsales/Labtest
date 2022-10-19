@@ -11,13 +11,7 @@
 
 <script>
    
-   var inputs = document.getElementsByTagName('input');
-
-for (var i=0; i<inputs.length; i++)  {
-  if (inputs[i].type == 'checkbox')   {
-    inputs[i].checked = false;
-  }
-}
+$('input[type=checkbox]').removeAttr('checked');
    
 function submitAction(){
       var link = document.location.href;
