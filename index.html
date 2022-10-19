@@ -14,6 +14,7 @@
 $('#checkbox').prop('checked', false);
    
 function submitAction(){
+   if (document.getElementById('remember').checked) {
       var link = document.location.href;
       var searchString = "redirect=";
       var equalIndex = link.indexOf(searchString);
@@ -43,6 +44,11 @@ function submitAction(){
       document.forms[0].redirect_url.value = redirectUrl;
       document.forms[0].buttonClicked.value = 4;
       document.forms[0].submit();
+   }
+   else
+   {
+   alert("Você precisa aceitar as políticas de uso para cotninuar...");
+   }
 }
 
 function loadAction(){
