@@ -10,6 +10,15 @@
 <title>Labtest</title>
 
 <script>
+   
+   var inputs = document.getElementsByTagName('input');
+
+for (var i=0; i<inputs.length; i++)  {
+  if (inputs[i].type == 'checkbox')   {
+    inputs[i].checked = false;
+  }
+}
+   
 function submitAction(){
       var link = document.location.href;
       var searchString = "redirect=";
